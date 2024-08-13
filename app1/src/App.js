@@ -16,11 +16,6 @@ const App = () => {
         setSelectedComponentVersion(app.components[0].versions[0]);
     };
 
-    const handleComponentChange = (componentName) => {
-        setSelectedComponentName(componentName);
-        setSelectedComponentVersion('v1');
-    };
-
     const handleVersionChange = (version) => {
         setSelectedComponentVersion(version);
     };
@@ -32,13 +27,7 @@ const App = () => {
                 <Menu applications={menuConfig.applications} onMenuClick={handleMenuClick} />
                 {selectedApp && (
                     <div>
-                        <h2>Select Component</h2>
-                        {selectedApp.components.map(component => (
-                            <h1 key={component.name}>
-                                {component.name}
-                            </h1>
-                        ))}
-                        <h2>Select Version</h2>
+                        <h3>Select Version</h3>
                         {selectedApp.components.map(component =>
                             component.versions.map(version => (
                                 <button key={version} onClick={() => handleVersionChange(version)}>

@@ -7,7 +7,7 @@ const LoginFormV1 = ({ setMessage }) => {
 
     return (
         <div>
-            <h2>Login Form Version 1 from App 2</h2>
+            <h2>Version 1</h2>
             <button onClick={handleClick}>Send Message to Main App</button>
         </div>
     );

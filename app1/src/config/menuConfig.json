@@ -1,9 +1,9 @@
 {
     "applications": [
         {
-            "name": "app2",
+            "name": "Remote App 1",
             "menuItem": {
-                "label": "Registration Form Application"
+                "label": "Registration Form"
             },
             "components": [
                 {
@@ -13,9 +13,9 @@
             ]
         },
         {
-            "name": "app3",
+            "name": "Remote App 2",
             "menuItem": {
-                "label": "Login Form Application"
+                "label": "Login Form"
             },
             "components": [
                 {
