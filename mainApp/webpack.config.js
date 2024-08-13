@@ -34,7 +34,7 @@ module.exports = {
       name: "mainApp",
       remotes: {
         contentManagement: "contentManagement@[contentManagementUrl]/remoteEntry.js",
-        app3: "app3@[app3Url]/remoteEntry.js",
+        analytics: "analytics@[analyticsUrl]/remoteEntry.js",
       },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),

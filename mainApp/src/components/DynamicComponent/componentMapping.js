@@ -5,10 +5,10 @@ const componentMapping = {
     'ArticleManagerV2': lazy(() => import('contentManagement/ArticleManagerV2')),
     'MediaManagerV1': lazy(() => import('contentManagement/MediaManagerV1')),
     'MediaManagerV2': lazy(() => import('contentManagement/MediaManagerV2')),
-    'UserInsightsV1': lazy(() => import('app3/UserInsightsV1')),
-    'UserInsightsV2': lazy(() => import('app3/UserInsightsV2')),
-    'TrafficReportsV1': lazy(() => import('app3/TrafficReportsV1')),
-    'TrafficReportsV2': lazy(() => import('app3/TrafficReportsV2')),
+    'UserInsightsV1': lazy(() => import('analytics/UserInsightsV1')),
+    'UserInsightsV2': lazy(() => import('analytics/UserInsightsV2')),
+    'TrafficReportsV1': lazy(() => import('analytics/TrafficReportsV1')),
+    'TrafficReportsV2': lazy(() => import('analytics/TrafficReportsV2')),
 };
 
 export const getComponent = (componentName, version) => {

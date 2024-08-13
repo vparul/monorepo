@@ -5,7 +5,7 @@
     "packages": [
       "mainApp",
       "contentManagement",
-      "app3"
+      "analytics"
     ]
   },
   "scripts": {

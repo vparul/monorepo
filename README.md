@@ -13,7 +13,7 @@ Both `mainApp` and `contentManagement` are independently deployed apps:
 
 - `mainApp`: http://localhost:3001
 - `contentManagement`: http://localhost:3002
-- `app3`: http://localhost:3003
+- `analytics`: http://localhost:3003
 
 Check out this link below for more examples:
 
