@@ -2,9 +2,10 @@ import React from 'react';
 import './ArticleManager.css';
 
 const ArticleManager = ({ setMessage }) => {
-    React.useEffect(() => {
-        setMessage();
-    }, [setMessage]);
+
+    const handleSetMessage = () => {
+        setMessage('Article Manager V2 selected')
+     };
 
     const articles = [
         { id: 1, title: "Getting Started with TypeScript", author: "Alice Johnson" },
@@ -14,6 +15,7 @@ const ArticleManager = ({ setMessage }) => {
     return (
         <div className="article-manager">
             <h2>Article Manager V2</h2>
+            <button onClick={handleSetMessage} className="set-message-button">Set Message</button>
             <table>
                 <thead>
                     <tr>

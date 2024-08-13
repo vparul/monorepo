@@ -1,10 +1,11 @@
 import React from 'react';
-import './ArticleManager.css';
+import "./ArticleManager.css";
 
 const ArticleManager = ({ setMessage }) => {
-    React.useEffect(() => {
-        setMessage();
-    }, [setMessage]);
+
+    const handleSetMessage = () => {
+       setMessage('Article Manager V1 selected')
+    };
 
     const articles = [
         { id: 1, title: "Understanding React", author: "John Doe" },
@@ -14,6 +15,7 @@ const ArticleManager = ({ setMessage }) => {
     return (
         <div className="article-manager">
             <h2>Article Manager V1</h2>
+            <button onClick={handleSetMessage} className="set-message-button">Set Message</button>
             <ul>
                 {articles.map(article => (
                     <li key={article.id}>

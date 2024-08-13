@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import { Provider } from 'react-redux';
-import store from './store';
+import { Provider, useDispatch } from 'react-redux';
+import store, { clearMessage } from './store';
 import Menu from './components/Menu';
 import ViewPanel from './components/ViewPanel';
 import menuConfig from './config/menuConfig.json';
 import './App.css';
 
 const App = () => {
+    const  dispatch = useDispatch();
+
     const [selectedApp, setSelectedApp] = useState(null);
     const [selectedComponent, setSelectedComponent] = useState(null);
     const [selectedComponentVersion, setSelectedComponentVersion] = useState('V1');
@@ -15,6 +17,7 @@ const App = () => {
         setSelectedApp(app);
         setSelectedComponent(component);
         setSelectedComponentVersion(version || component.versions[0]);
+        dispatch(clearMessage());
     };
 
     return (

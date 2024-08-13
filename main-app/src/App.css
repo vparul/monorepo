@@ -21,3 +21,16 @@ body {
     display: flex;
     flex: 1;
 }
+.set-message-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.set-message-button:hover {
+    background-color: #45a049;
+}

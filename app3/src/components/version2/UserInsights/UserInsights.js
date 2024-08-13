@@ -2,9 +2,10 @@ import React from 'react';
 import './UserInsights.css';
 
 const UserInsights = ({ setMessage }) => {
-    React.useEffect(() => {
-        setMessage();
-    }, [setMessage]);
+   
+    const handleSetMessage = () => {
+        setMessage('User Insights V2 selected')
+     };
 
     const insights = [
         { id: 1, user: "Charlie", engagement: "High" },
@@ -14,6 +15,7 @@ const UserInsights = ({ setMessage }) => {
     return (
         <div className="user-insights">
             <h2>User Insights V2</h2>
+            <button onClick={handleSetMessage} className="set-message-button">Set Message</button>
             <table>
                 <thead>
                     <tr>

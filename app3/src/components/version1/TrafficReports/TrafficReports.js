@@ -2,9 +2,11 @@ import React from 'react';
 import './TrafficReports.css';
 
 const TrafficReports = ({ setMessage }) => {
-    React.useEffect(() => {
-        setMessage();
-    }, [setMessage]);
+   
+    const handleSetMessage = () => {
+        setMessage('Traffic Reports V1 selected')
+     };
+
 
     const reports = [
         { id: 1, type: "Monthly", views: 2000 },
@@ -14,6 +16,7 @@ const TrafficReports = ({ setMessage }) => {
     return (
         <div className="traffic-reports">
             <h2>Traffic Reports V1</h2>
+            <button onClick={handleSetMessage} className="set-message-button">Set Message</button>
             <ul>
                 {reports.map(report => (
                     <li key={report.id}>

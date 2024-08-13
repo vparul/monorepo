@@ -22,7 +22,7 @@ const DynamicComponent = ({ componentName, version }) => {
             ) : (
                 <div>Component not found.</div>
             )}
-            <div>Shared Message: {message}</div>
+            <div style={{ paddingTop: "2rem"}}>Shared Message: {message}</div>
         </div>
     );
 };

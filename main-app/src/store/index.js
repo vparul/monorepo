@@ -1,6 +1,5 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-// Create a slice for shared state
 const appSlice = createSlice({
     name: 'app',
     initialState: {
@@ -17,12 +16,14 @@ const appSlice = createSlice({
         clearData: (state) => {
             state.data = {};
         },
+        clearMessage: (state) => {
+            state.message = "";
+        }
     },
 });
 
-export const { setMessage, setData, clearData } = appSlice.actions;
+export const { setMessage, setData, clearData, clearMessage } = appSlice.actions;
 
-// Create and export the store
 const store = configureStore({
     reducer: {
         app: appSlice.reducer,
