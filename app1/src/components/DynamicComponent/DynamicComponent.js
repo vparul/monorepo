@@ -1,15 +1,29 @@
-import React, { Suspense, lazy } from 'react';
-import { useSelector } from 'react-redux';
+import React, { Suspense } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setMessage } from '../../store';
+import { getComponent } from './componentMapping';
 
-const DynamicComponent = ({ app }) => {
-    console.log(app);
-    // Assuming app names correspond to the remote entry points
-    const RemoteApp = React.lazy(() => import("app2/App"));
+const DynamicComponent = ({ appName, componentName, version }) => {
+    const dispatch = useDispatch();
+    const message = useSelector(state => state.app.message);
+
+    const ComponentToLoad = getComponent(appName, componentName, version);
+
+    const handleSetMessage = () => {
+        dispatch(setMessage(`Message from ${componentName} ${version}`));
+    };
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <RemoteApp />
-        </Suspense>
+        <div>
+            {ComponentToLoad ? (
+                <Suspense fallback={<div>Loading component...</div>}>
+                    <ComponentToLoad setMessage={handleSetMessage} />
+                </Suspense>
+            ) : (
+                <div>Component not found.</div>
+            )}
+            <div>Shared Message: {message}</div>
+        </div>
     );
 };
 

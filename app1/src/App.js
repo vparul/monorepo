@@ -1,47 +1,59 @@
-// import React, {Suspense} from "react";
-// const RemoteApp = React.lazy(() => import("app2/App"));
-
-// const App = () => {
-//   return (
-//     <div>
-//       <div style={{
-//         margin:"10px",
-//         padding:"10px",
-//         textAlign:"center",
-//         backgroundColor:"greenyellow"
-//       }}>
-//         <h1>App1</h1>
-//       </div>
-//       <Suspense fallback={"loading..."}>
-//         <RemoteApp/>
-//       </Suspense>
-//     </div>)
-// }
-
-
-// export default App;
-
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
+import Menu from './components/Menu';
+import ViewPanel from './components/ViewPanel';
 import menuConfig from './config/menuConfig.json';
-import Menu from './components/Menu/Menu';
-import ViewPanel from './components/ViewPanel/ViewPanel';
 
 const App = () => {
-    const [applications] = useState(menuConfig.applications);
     const [selectedApp, setSelectedApp] = useState(null);
+    const [selectedComponentName, setSelectedComponentName] = useState(null);
+    const [selectedComponentVersion, setSelectedComponentVersion] = useState('v1');
 
     const handleMenuClick = (app) => {
         setSelectedApp(app);
+        setSelectedComponentName(app.components[0].name);
+        setSelectedComponentVersion(app.components[0].versions[0]);
+    };
+
+    const handleComponentChange = (componentName) => {
+        setSelectedComponentName(componentName);
+        setSelectedComponentVersion('v1');
+    };
+
+    const handleVersionChange = (version) => {
+        setSelectedComponentVersion(version);
     };
 
     return (
-        <div>
-            <h1>My App</h1>
-            <Menu applications={applications} onMenuClick={handleMenuClick} />
-            <ViewPanel applications={applications} selectedApp={selectedApp} />
-        </div>
+        <Provider store={store}>
+            <div>
+                <h1>My App</h1>
+                <Menu applications={menuConfig.applications} onMenuClick={handleMenuClick} />
+                {selectedApp && (
+                    <div>
+                        <h2>Select Component</h2>
+                        {selectedApp.components.map(component => (
+                            <h1 key={component.name}>
+                                {component.name}
+                            </h1>
+                        ))}
+                        <h2>Select Version</h2>
+                        {selectedApp.components.map(component =>
+                            component.versions.map(version => (
+                                <button key={version} onClick={() => handleVersionChange(version)}>
+                                    {version}
+                                </button>
+                            ))
+                        )}
+                    </div>
+                )}
+                <ViewPanel selectedApp={selectedApp} selectedComponentName={selectedComponentName} selectedComponentVersion={selectedComponentVersion} />
+            </div>
+        </Provider>
     );
 };
+
 
 export default App;
 

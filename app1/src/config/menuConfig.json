@@ -1,20 +1,28 @@
 {
     "applications": [
         {
-            "name": "Old Registration Form",
-            "version": "v1",
+            "name": "app2",
             "menuItem": {
-                "label": "Old Registration Form 1",
-                "route": "app2/App"
-            }
+                "label": "Registration Form Application"
+            },
+            "components": [
+                {
+                    "name": "RegistrationForm",
+                    "versions": ["V1", "V2"]
+                }
+            ]
         },
         {
-            "name": "New Registration Form",
-            "version": "v2",
+            "name": "app3",
             "menuItem": {
-                "label": "New Registration Form",
-                "route": "app3/App"
-            }
+                "label": "Login Form Application"
+            },
+            "components": [
+                {
+                    "name": "LoginForm",
+                    "versions": ["V1", "V2"]
+                }
+            ]
         }
     ]
 }

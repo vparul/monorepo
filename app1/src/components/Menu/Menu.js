@@ -2,18 +2,16 @@ import React from 'react';
 
 const Menu = ({ applications, onMenuClick }) => {
     return (
-        <div>
+        <nav>
             <h2>Menu</h2>
             <ul>
-                {applications.map((app) => (
+                {applications.map(app => (
                     <li key={app.name}>
-                        <a href="#" onClick={() => onMenuClick(app)}>
-                            {app.menuItem.label}
-                        </a>
+                        <button onClick={() => onMenuClick(app)}>{app.menuItem.label}</button>
                     </li>
                 ))}
             </ul>
-        </div>
+        </nav>
     );
 };
 
