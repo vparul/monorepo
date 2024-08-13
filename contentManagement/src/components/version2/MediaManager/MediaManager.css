@@ -1,31 +1,32 @@
 .media-manager {
-    padding: 20px;
-    background-color: #e9ecef;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .media-manager h2 {
-    color: #212529;
-    margin-bottom: 15px;
+  color: #212529;
+  margin-bottom: 15px;
 }
 
 .media-manager table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.media-manager th, .media-manager td {
-    padding: 10px;
-    border: 1px solid #dee2e6;
-    text-align: left;
+.media-manager th,
+.media-manager td {
+  padding: 10px;
+  border: 1px solid #dee2e6;
+  text-align: left;
 }
 
 .media-manager th {
-    background-color: #343a40;
-    color: #fff;
+  background-color: #343a40;
+  color: #fff;
 }
 
 .media-manager tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
