@@ -1,0 +1,20 @@
+{
+    "applications": [
+        {
+            "name": "Old Registration Form",
+            "version": "v1",
+            "menuItem": {
+                "label": "Old Registration Form 1",
+                "route": "app2/App"
+            }
+        },
+        {
+            "name": "New Registration Form",
+            "version": "v2",
+            "menuItem": {
+                "label": "New Registration Form",
+                "route": "app3/App"
+            }
+        }
+    ]
+}
