@@ -1,0 +1,56 @@
+{
+  "applications": [
+    {
+      "id": "main-app",
+      "menuItem": {
+        "label": "Content Management",
+        "subMenu": [
+          {
+            "label": "Articles",
+            "components": [
+              {
+                "name": "ArticleManager",
+                "versions": ["V1", "V2"]
+              }
+            ]
+          },
+          {
+            "label": "Media Library",
+            "components": [
+              {
+                "name": "MediaManager",
+                "versions": ["V1", "V2"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "app2",
+      "menuItem": {
+        "label": "Analytics",
+        "subMenu": [
+          {
+            "label": "User Insights",
+            "components": [
+              {
+                "name": "UserInsights",
+                "versions": ["V1", "V2"]
+              }
+            ]
+          },
+          {
+            "label": "Traffic Reports",
+            "components": [
+              {
+                "name": "TrafficReports",
+                "versions": ["V1", "V2"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -22,17 +22,22 @@ module.exports = {
           presets: ['@babel/preset-react'],
         },
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   plugins: [
-    // To learn more about the usage of this plugin, please visit https://webpack.js.org/plugins/module-federation-plugin/
     new ModuleFederationPlugin({
       name: 'app3',
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App',
-        './LoginFormV1': './src/components/LoginFormV1',
-        './LoginFormV2': './src/components/LoginFormV2',
+        './TrafficReportsV1': './src/components/version1/TrafficReports/TrafficReports',
+        './TrafficReportsV2': './src/components/version2/TrafficReports/TrafficReports',
+        './UserInsightsV1': './src/components/version1/UserInsights/UserInsights',
+        './UserInsightsV2': './src/components/version2/UserInsights/UserInsights',
       },
       shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
     }),

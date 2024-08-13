@@ -3,7 +3,7 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "app1",
+      "main-app",
       "app2",
       "app3"
     ]
@@ -13,7 +13,9 @@
     "build": "lerna run build"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "css-loader": "^7.1.2",
+    "lerna": "^4.0.0",
+    "style-loader": "^4.0.0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",

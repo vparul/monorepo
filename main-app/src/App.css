@@ -1,0 +1,79 @@
+/* App.css */
+
+.app-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.app-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.app-body {
+    display: flex;
+    flex: 1;
+}
+
+.menu-container {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    margin-right: 1rem;
+}
+
+.menu-item {
+    margin-bottom: 1rem;
+}
+
+.sub-menu {
+    margin: 1rem;
+}
+
+.sub-menu-item {
+    margin: 0.5rem;
+}
+
+.component-list {
+    padding: 1rem;
+}
+
+.component-item {
+    cursor: pointer;
+    padding: 0.3rem;
+    transition: background-color 0.2s ease;
+}
+
+.component-item:hover {
+    background-color: #e0e0e0;
+}
+
+.version-selector {
+    margin-top: 1rem;
+}
+
+.version-button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #4CAF50;
+    background-color: white;
+    color: #4CAF50;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.version-button.active, .version-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.view-panel {
+    flex: 1;
+    padding: 1rem;
+}

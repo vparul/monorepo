@@ -22,6 +22,10 @@ module.exports = {
           presets: ['@babel/preset-react'],
         },
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   plugins: [
@@ -31,8 +35,10 @@ module.exports = {
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App',
-        './RegistrationFormV1': './src/components/RegistrationFormV1',
-        './RegistrationFormV2': './src/components/RegistrationFormV2',
+        './ArticleManagerV1': './src/components/version1/ArticleManager/ArticleManager',
+        './ArticleManagerV2': './src/components/version2/ArticleManager/ArticleManager',
+        './MediaManagerV1': './src/components/version1/MediaManager/MediaManager',
+        './MediaManagerV2': './src/components/version2/MediaManager/MediaManager',
       },
       shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
     }),
