@@ -9,10 +9,10 @@ yarn
 yarn start
 ```
 
-Both `main-app` and `app2` are independently deployed apps:
+Both `mainApp` and `contentManagement` are independently deployed apps:
 
-- `main-app`: http://localhost:3001
-- `app2`: http://localhost:3002
+- `mainApp`: http://localhost:3001
+- `contentManagement`: http://localhost:3002
 - `app3`: http://localhost:3003
 
 Check out this link below for more examples:

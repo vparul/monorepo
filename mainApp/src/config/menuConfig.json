@@ -1,7 +1,7 @@
 {
   "applications": [
     {
-      "id": "main-app",
+      "id": "mainApp",
       "menuItem": {
         "label": "Content Management",
         "subMenu": [
@@ -27,7 +27,7 @@
       }
     },
     {
-      "id": "app2",
+      "id": "contentManagement",
       "menuItem": {
         "label": "Analytics",
         "subMenu": [

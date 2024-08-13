@@ -1,10 +1,10 @@
 import React, { lazy } from 'react';
 
 const componentMapping = {
-    'ArticleManagerV1': lazy(() => import('app2/ArticleManagerV1')),
-    'ArticleManagerV2': lazy(() => import('app2/ArticleManagerV2')),
-    'MediaManagerV1': lazy(() => import('app2/MediaManagerV1')),
-    'MediaManagerV2': lazy(() => import('app2/MediaManagerV2')),
+    'ArticleManagerV1': lazy(() => import('contentManagement/ArticleManagerV1')),
+    'ArticleManagerV2': lazy(() => import('contentManagement/ArticleManagerV2')),
+    'MediaManagerV1': lazy(() => import('contentManagement/MediaManagerV1')),
+    'MediaManagerV2': lazy(() => import('contentManagement/MediaManagerV2')),
     'UserInsightsV1': lazy(() => import('app3/UserInsightsV1')),
     'UserInsightsV2': lazy(() => import('app3/UserInsightsV2')),
     'TrafficReportsV1': lazy(() => import('app3/TrafficReportsV1')),
