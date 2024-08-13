@@ -1,61 +1,60 @@
-/* SubMenu.css */
-
 .sub-menu {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .sub-menu-item {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .sub-menu-label {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #2c3e50;
-    display: block;
-    margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 .component-list {
-    padding: 0.5rem 0;
+  padding: 0.5rem 0;
 }
 
 .component-item {
-    cursor: pointer;
-    padding: 0.75rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: #ffffff;
-    border: 1px solid #d3d3d3;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: #2c3e50;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffffff;
+  border: 1px solid #d3d3d3;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #2c3e50;
 }
 
 .component-item:hover {
-    background-color: #4CAF50; /* Green */
-    color: #ffffff;
+  background-color: #4caf50;
+  color: #ffffff;
 }
 
 .version-selector {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 .version-list {
-    margin-top: 0.3rem;
+  margin-top: 0.3rem;
 }
 
 .version-item {
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: #ffffff;
-    border: 1px solid #d3d3d3;
-    margin-bottom: 0.5rem;
-    color: #2c3e50;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffffff;
+  border: 1px solid #d3d3d3;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
 }
 
-.version-item.active, .version-item:hover {
-    background-color: #4CAF50; /* Green */
-    color: white;
+.version-item.active,
+.version-item:hover {
+  background-color: #4caf50;
+  color: white;
 }
