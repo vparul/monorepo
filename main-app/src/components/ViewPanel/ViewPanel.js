@@ -1,13 +1,15 @@
 import React from "react";
 import DynamicComponent from "../DynamicComponent/DynamicComponent";
 
+import "./ViewPanel.css";
+
 const ViewPanel = ({
   selectedApp,
   selectedComponentName,
   selectedComponentVersion,
 }) => {
   return (
-    <div>
+    <div className="view-panel">
       <h2>View Panel</h2>
       {selectedApp ? (
         <div>

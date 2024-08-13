@@ -8,17 +8,13 @@ import './App.css';
 
 const App = () => {
     const [selectedApp, setSelectedApp] = useState(null);
-    const [selectedComponentName, setSelectedComponentName] = useState(null);
+    const [selectedComponent, setSelectedComponent] = useState(null);
     const [selectedComponentVersion, setSelectedComponentVersion] = useState('V1');
 
-    const handleMenuClick = (app, component) => {
+    const handleMenuClick = (app, component, version) => {
         setSelectedApp(app);
-        setSelectedComponentName(component.name);
-        setSelectedComponentVersion(component.versions[0]);
-    };
-
-    const handleVersionChange = (version) => {
-        setSelectedComponentVersion(version);
+        setSelectedComponent(component);
+        setSelectedComponentVersion(version || component.versions[0]);
     };
 
     return (
@@ -28,12 +24,15 @@ const App = () => {
                     <h1>Application Dashboard</h1>
                 </header>
                 <div className="app-body">
-                    <Menu applications={menuConfig.applications} onMenuClick={handleMenuClick} />
+                    <Menu 
+                        applications={menuConfig.applications} 
+                        onMenuClick={handleMenuClick} 
+                        selectedComponent={selectedComponent}
+                    />
                     <ViewPanel 
                         selectedApp={selectedApp} 
-                        selectedComponentName={selectedComponentName} 
+                        selectedComponentName={selectedComponent?.name} 
                         selectedComponentVersion={selectedComponentVersion} 
-                        onVersionChange={handleVersionChange}
                     />
                 </div>
             </div>

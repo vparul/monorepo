@@ -1,16 +1,18 @@
 import React from "react";
 import SubMenu from "../SubMenu";
+import "./Menu.css";
 
-const Menu = ({ applications, onMenuClick }) => {
+const Menu = ({ applications, onMenuClick, selectedComponent }) => {
   return (
-    <div className="menu-container">
+    <div className="menu">
       {applications.map((app) => (
         <div key={app.id} className="menu-item">
-          <span>{app.menuItem.label}</span>
+          <span className="menu-label">{app.menuItem.label}</span>
           <SubMenu
             subMenu={app.menuItem.subMenu}
             app={app}
             onMenuClick={onMenuClick}
+            selectedComponent={selectedComponent}
           />
         </div>
       ))}
